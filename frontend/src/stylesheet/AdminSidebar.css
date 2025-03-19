@@ -1,0 +1,81 @@
+.admin-sidebar {
+  width: 250px; /* Increased width for better spacing */
+  height: 120vh;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-image {
+  width: 120px; /* Adjust the size of the logo */
+  height: auto;
+}
+
+.admin-sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.admin-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  flex-grow: 1; /* Allow the list to take up remaining space */
+}
+
+.admin-sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #2d557d;
+}
+
+.sidebar-icon {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 20px; /* Icon size */
+}
+
+.logout-section {
+  padding-top: 20px;
+  margin-bottom: 300px;
+  border-top: 1px solid #34495e; /* Separator line */
+}
+
+.logout-button {
+  background-color: #e74c3c; /* Red color for logout button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}

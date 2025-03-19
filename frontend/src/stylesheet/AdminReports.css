@@ -1,0 +1,56 @@
+.admin-reports-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+  }
+  
+  .admin-reports-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 20px; /* Adjust based on sidebar width */
+    margin-right: 60px;
+    margin-bottom: 80px;
+  }
+  
+  .admin-reports-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .user-search {
+    margin-bottom: 20px;
+  }
+  
+  .user-search label {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .user-search select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .charts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Increase gap between charts */
+  }
+  
+  .chart {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make charts take full width */
+  }
+  
+  .chart h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #34495e;
+    text-align: center;
+  }
