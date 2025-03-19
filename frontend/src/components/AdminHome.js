@@ -2,20 +2,37 @@ import React, { useEffect, useState } from "react";
 import AdminSidebar from "./AdminSidebar";
 import AdminFooter from "./AdminFooter";
 import "../stylesheet/AdminHome.css";
+import { jwtDecode } from "jwt-decode";
+import axios from "axios";
+import myImage from "../assets/background2.jpg"; // Import your PNG file
+
 import { FaUsers, FaMoneyCheckAlt, FaChartLine, FaListAlt } from "react-icons/fa";
 
 const AdminHome = () => {
-  const [adminName, setAdminName] = useState("Admin");
+  //const [adminName, setAdminName] = useState("Admin");
+  const [username, setUsername] = useState("");
+  
 
   // Fetch admin name (you can replace this with actual API call)
   useEffect(() => {
-    // Simulate fetching admin name
-    const fetchAdminName = () => {
-      setTimeout(() => {
-        setAdminName("John Doe"); // Replace with actual admin name
-      }, 1000);
+    const fetchUserDetails = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        if (!token) return;
+
+        const decoded = jwtDecode(token);
+        const userId = decoded.id;
+
+        const userResponse = await axios.get(`http://localhost:5000/api/users/${userId}`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+
+        setUsername(userResponse.data.username);
+      } catch (error) {
+        console.error("Error fetching user details:", error);
+      }
     };
-    fetchAdminName();
+    fetchUserDetails();
   }, []);
 
   return (
@@ -24,7 +41,7 @@ const AdminHome = () => {
       <div className="admin-content">
         <h1 className="dashboard-title">Admin Dashboard</h1>
         <div className="welcome-message">
-          <h2>Hi, {adminName}!</h2>
+          <h2>Hi, {username || "user"}!</h2>
           <p>Welcome back to your dashboard. Here's what's happening today.</p>
         </div>
 
@@ -60,6 +77,11 @@ const AdminHome = () => {
             <h3>Manage Categories</h3>
             <p>Organize and manage product or service categories.</p>
           </div>
+
+          
+        </div>
+        <div className="bg-card">
+            <img src={myImage} alt="Card" className="card-image" />
         </div>
       </div>
       <AdminFooter />
