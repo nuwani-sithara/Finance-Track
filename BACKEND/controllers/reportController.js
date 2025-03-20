@@ -1,6 +1,7 @@
 const Report = require('../models/report');
 
 // Create a new report
+
 exports.createReport = async (req, res) => {
   try {
     const report = await Report.create({ ...req.body, userId: req.user.id });

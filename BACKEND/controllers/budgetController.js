@@ -4,6 +4,7 @@ const Notification = require('../models/notification');
 // Create a new budget
 exports.createBudget = async (req, res) => {
   try {
+    
     console.log('Request Body:', req.body); // Log the request body
     console.log('User ID:', req.user.id); // Log the user ID
 
