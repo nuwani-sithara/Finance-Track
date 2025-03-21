@@ -1,14 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaHome, FaList, FaChartLine, FaSignOutAlt, FaUsers, FaMoneyCheckAlt } from "react-icons/fa"; // Icons from react-icons
 import logoImage from "../assets/logo1.png"; // Import your logo image
 import "../stylesheet/AdminSidebar.css"; // Import your stylesheet
 
 const AdminSidebar = () => {
-  const handleLogout = () => {
-    // Add your logout logic here
-    console.log("User logged out");
-  };
+  const navigate = useNavigate();
+
+    const handleLogout = () => {
+        // Clear authentication data (adjust based on your auth method)
+        localStorage.removeItem("token"); 
+        sessionStorage.removeItem("userSession"); 
+        
+        // Redirect to login page
+        navigate("/user-login");
+    };
 
   return (
     <div className="admin-sidebar">
