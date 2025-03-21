@@ -3,11 +3,11 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import AdminCategoryManagement from '../AdminCategoryManagement';
+import AdminCategoryManagement from '../components/AdminCategoryManagement';
 
 // Mock the child components to focus on testing AdminCategoryManagement
-jest.mock('../AdminSidebar', () => () => <div data-testid="admin-sidebar">Admin Sidebar</div>);
-jest.mock('../AdminFooter', () => () => <div data-testid="admin-footer">Admin Footer</div>);
+jest.mock('../AdminSidebar', () => () => null);
+jest.mock('../AdminFooter', () => () => null);
 
 // Mock localStorage
 const localStorageMock = {

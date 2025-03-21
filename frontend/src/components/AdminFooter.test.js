@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import AdminFooter from '../AdminFooter';
+import AdminFooter from '../components/AdminFooter';
 
 describe('AdminFooter Component', () => {
   test('renders without crashing', () => {

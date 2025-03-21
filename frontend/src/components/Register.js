@@ -27,7 +27,7 @@ const Register = () => {
             });
     
             console.log("Registration successful:", response.data);
-            navigate("/user-home");
+            navigate("/user-login");
         } catch (error) {
             console.error("Error registering user:", error.response ? error.response.data : error.message);
             setError(error.response ? error.response.data.message : "Error registering user. Please try again.");

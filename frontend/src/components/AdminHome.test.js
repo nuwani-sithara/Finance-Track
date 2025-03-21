@@ -8,9 +8,9 @@ import { jwtDecode } from 'jwt-decode';
 // Mock the dependencies
 jest.mock('axios');
 jest.mock('jwt-decode');
-jest.mock('../AdminSidebar', () => () => <div data-testid="admin-sidebar">Sidebar</div>);
-jest.mock('../AdminFooter', () => () => <div data-testid="admin-footer">Footer</div>);
-jest.mock('../assets/background2.jpg', () => 'background-image-mock.jpg');
+jest.mock('../AdminSidebar', () => () => null);
+jest.mock('../AdminFooter', () => () => null);
+jest.mock('../assets/background2.jpg', () => () => null);
 jest.mock('react-icons/fa', () => ({
   FaUsers: () => <div data-testid="icon-users">Users Icon</div>,
   FaMoneyCheckAlt: () => <div data-testid="icon-money">Money Icon</div>,

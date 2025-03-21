@@ -15,6 +15,7 @@ import AdminCategoryManagement from "./components/AdminCategoryManagement";
 import AdminReports from "./components/AdminReports";
 import AdminTransactions from "./components/AdminTransactions";
 import AdminUsers from "./components/AdminUsers";
+import UserLogin from "./components/UserLogin";
 // import CurrencyList from "./components/CurrencyList";
 
 // Function to decode JWT token
@@ -41,7 +42,7 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
 
   // If user role is not allowed, redirect to a fallback route (e.g., UserHome)
   if (!allowedRoles.includes(userRole)) {
-    return <Navigate to="/user-home" replace />;
+    return <Navigate to="/user-login" replace />;
   }
 
   // If user is authenticated and has the correct role, render the children
@@ -56,6 +57,7 @@ function App() {
           {/* Public Routes */}
           <Route path="/" element={<LandingPage />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/user-login" element={<UserLogin />} />
 
           {/* Protected Routes for Users */}
           <Route
@@ -114,7 +116,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-
+          
           {/* Protected Routes for Admins Only */}
           <Route
             path="/admin-home"

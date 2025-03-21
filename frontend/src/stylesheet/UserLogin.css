@@ -1,0 +1,103 @@
+/* UserLogin.css */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2d3d54, #1e2a38); /* Gradient from #2d3d54 to #1e2a38 */
+}
+
+.login-container {
+    background-color: #2d3d54; /* Slightly lighter than the background for contrast */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-logo {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    margin-bottom: 1.5rem; /* Space between logo and heading */
+}
+
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    color: #fefefe;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.form-group .input-icon {
+    margin-right: 0.5rem;
+    color: #ffffff;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.login-btn {
+    width: 106%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-btn .btn-icon {
+    margin-right: 0.5rem;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.signup-link {
+    margin-top: 1rem;
+    color: #f6efef;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-bottom: 1rem;
+}
