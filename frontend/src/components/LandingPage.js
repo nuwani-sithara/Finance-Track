@@ -45,7 +45,7 @@ export default function LandingPage() {
                     <div className="hero-content">
                         <h2>Take Control of Your Finances</h2>
                         <p>Track your income, expenses, and savings with ease. Start managing your money smarter today.</p>
-                        <button onClick={toggleLoginForm} className="cta-btn">
+                        <button onClick={toggleLoginForm} className="cta-btnnn">
                             <FaSignInAlt className="cta-icon" /> Get Started
                         </button>
                     </div>
@@ -80,7 +80,7 @@ export default function LandingPage() {
                             <h2>Login to Your Account</h2>
                             {error && <p className="error-message">{error}</p>}
                             <form onSubmit={handleLogin}>
-                                <div className="form-group">
+                                <div className="log-grou">
                                     <label htmlFor="email">
                                         <FaUser className="input-icon" /> Email
                                     </label>
@@ -94,7 +94,7 @@ export default function LandingPage() {
                                         required
                                     />
                                 </div>
-                                <div className="form-group">
+                                <div className="log-grou">
                                     <label htmlFor="password">
                                         <FaLock className="input-icon" /> Password
                                     </label>

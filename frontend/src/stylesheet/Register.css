@@ -1,55 +1,94 @@
+/* Register.css */
+
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2d3d54, #1e2a38); /* Gradient background */
+}
+
 .register-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #2d3d54; /* Container background */
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.register-logo {
+    width: 150px; /* Logo size */
+    height: auto;
+    margin-bottom: 1.5rem; /* Space between logo and heading */
 }
 
 .register-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    color: #ffffff; /* White text for heading */
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    margin-right: 30px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
+    color: #ffffff; /* White text for labels */
     font-weight: bold;
-    color: #333;
 }
 
-.form-group input, .form-group select {
+.form-group input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
+    color: #333; /* Dark text for inputs */
+    background-color: #ffffff; /* White background for inputs */
 }
 
-button {
-    background-color: #3498db;
-    color: white;
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.register-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff; /* Blue button */
+    color: #fff;
     border: none;
-    padding: 10px 20px;
     border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 1rem;
 }
 
-button:hover {
-    background-color: #2980b9;
+.register-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
-.error {
-    color: #e74c3c;
-    text-align: center;
-    margin-bottom: 15px;
+.login-link {
+    margin-top: 1rem;
+    color: #ffffff; /* White text for link */
+}
+
+.login-link a {
+    color: #007bff; /* Blue link */
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #ff0000; /* Red error messages */
+    margin-bottom: 1rem;
 }

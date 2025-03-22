@@ -26,7 +26,7 @@
     animation: fadeInUp 1s ease-in-out;
 }
 
-.cta-btn {
+.cta-btnnn {
     background-color: #27ae60;
     color: #ffffff;
     padding: 15px 30px;
@@ -42,7 +42,7 @@
     animation: fadeIn 1.5s ease-in-out;
 }
 
-.cta-btn:hover {
+.cta-btnnn:hover {
     background-color: #219653;
 }
 
@@ -132,12 +132,12 @@
     color: #2c3e50;
 }
 
-.form-group {
+.log-grou {
     margin-bottom: 20px;
     text-align: left;
 }
 
-.form-group label {
+.log-grou label {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -151,7 +151,7 @@
     color: #3498db;
 }
 
-.form-group input {
+.log-grou input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
