@@ -69,7 +69,7 @@ const GoalForm = () => {
         <form onSubmit={handleSubmit} className="goal-form">
           <h1>{id ? 'Edit Goal' : 'Create Goal'}</h1>
           <div className="form-group">
-            <label htmlFor="goalName">Goal Name:</label>
+            <label htmlFor="goalName" style={{ color: 'black' }}>Goal Name:</label>
             <input
               type="text"
               id="goalName"
@@ -81,7 +81,7 @@ const GoalForm = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="targetAmount">Target Amount:</label>
+            <label htmlFor="targetAmount" style={{ color: 'black' }}>Target Amount:</label>
             <input
               type="number"
               id="targetAmount"
@@ -93,7 +93,7 @@ const GoalForm = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="currentAmount">Current Amount:</label>
+            <label htmlFor="currentAmount" style={{ color: 'black' }}>Current Amount:</label>
             <input
               type="number"
               id="currentAmount"
@@ -105,7 +105,7 @@ const GoalForm = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="deadline">Deadline:</label>
+            <label htmlFor="deadline" style={{ color: 'black' }}>Deadline:</label>
             <input
               type="date"
               id="deadline"
