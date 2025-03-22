@@ -12,5 +12,6 @@ router.get('/', transactionController.getAllTransactions);
 router.put('/:id', transactionController.updateTransaction);
 router.delete('/:id', transactionController.deleteTransaction);
 router.get('/admin', transactionController.getAllTransactionsAdmin);
+router.get('/user/:userId', transactionController.getTransactionsByUser);
 
 module.exports = router;

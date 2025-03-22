@@ -33,8 +33,8 @@ const AdminReports = () => {
     const fetchTransactions = async () => {
       try {
         const url = selectedUser
-          ? `http://localhost:5000/api/transactions/admin?userId=${selectedUser}`
-          : 'http://localhost:5000/api/transactions/admin';
+          ? `http://localhost:5000/api/transactions/user/${selectedUser}` // Fetch for a specific user
+          : 'http://localhost:5000/api/transactions/admin'; // Fetch for all users
 
         const response = await fetch(url, {
           headers: {
@@ -42,6 +42,7 @@ const AdminReports = () => {
           },
         });
         const data = await response.json();
+        console.log('Fetched Transactions:', data); // Debugging log
         setTransactions(data);
       } catch (error) {
         console.error('Error fetching transactions:', error);
@@ -74,6 +75,9 @@ const AdminReports = () => {
     name: key,
     value: expenseByCategory[key],
   }));
+
+  console.log('Income Chart Data:', incomeChartData); // Debugging log
+  console.log('Expense Chart Data:', expenseChartData); // Debugging log
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF'];
 

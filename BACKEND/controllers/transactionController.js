@@ -51,3 +51,14 @@ exports.getAllTransactionsAdmin = async (req, res) => {
     res.status(500).json({ message: 'Error fetching transactions', error });
   }
 };
+
+// Get transactions for a specific user (for admin)
+exports.getTransactionsByUser = async (req, res) => {
+  try {
+    const userId = req.params.userId;
+    const transactions = await Transaction.find({ userId }).populate('userId', 'username email');
+    res.status(200).json(transactions);
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching transactions for the user', error });
+  }
+};
